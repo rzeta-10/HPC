@@ -1,0 +1,3 @@
+[submodule "DistributedAttention"]
+	path = DistributedAttention
+	url = https://github.com/rzeta-10/DistributedAttention
