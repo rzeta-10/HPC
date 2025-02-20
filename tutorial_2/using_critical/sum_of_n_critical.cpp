@@ -32,12 +32,16 @@ int main(int argc, char* argv[]) {
     double sum = 0;
     double start_time = omp_get_wtime();
 
-    #pragma omp parallel for
-    for (size_t i = 0; i < a.size(); i++) {
+    #pragma omp parallel
+    {
+        double local_sum = 0;
+        #pragma omp for
+        for (size_t i = 0; i < a.size(); i++) {
+            local_sum += a[i];
+        }
         #pragma omp critical
-        sum += a[i];  // Ensuring only one thread updates `sum` at a time
+        sum += local_sum;
     }
-
     double end_time = omp_get_wtime();
     double elapsed_time = end_time - start_time;
 
