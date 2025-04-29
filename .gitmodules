@@ -1,6 +1,6 @@
 [submodule "DistributedAttention"]
-    path = DistributedAttention
-    url = https://github.com/rzeta-10/DistributedAttention
+	path = DistributedAttention
+	url = https://github.com/rzeta-10/DistributedAttention.git
 [submodule "submodules/repository"]
     path = submodules/repository
     url = https://github.com/rzeta-10/DistributedAttention
